@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables for border-border, bg-background, etc. */
+@layer base {
+  :root {
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 215 20% 65%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+  }
+
+  .dark {
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+/* Custom scrollbar styles */
