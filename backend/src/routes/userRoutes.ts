@@ -1,9 +1,14 @@
-import { Router } from 'express';
-import { auth, requireRole } from '../middleware/auth';
-import { listUsers } from '../controllers/userController';
+// routes/userRoutes.ts
+import { Router } from "express";
 
 const router = Router();
 
-router.get('/', auth, requireRole(['admin']), listUsers);
+router.get("/", (req, res) => {
+  res.json([
+    { _id: "user-1", name: "Patient kevin" },
+    { _id: "user-2", name: "Doctor Alex" },
+    { _id: "user-3", name: "User-User1" },
+  ]);
+});
 
 export default router;
