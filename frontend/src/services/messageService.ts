@@ -4,7 +4,7 @@ import { Message, SendMessageData } from '@/types';
 export const messageService = {
   async getMessages(conversationId: string): Promise<Message[]> {
     const response = await apiClient.get<{ messages: Message[] }>(`/messages/${conversationId}`);
-    return response.data.messages;
+    return response?.data
   },
 
   async sendMessage(data: SendMessageData): Promise<Message> {

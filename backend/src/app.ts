@@ -9,10 +9,18 @@ import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
 import conversationRoutes from './routes/conversationRoutes';
 import messageRoutes from './routes/messageRoutes';
+import callRoutes from './routes/callRoute';
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173", // frontend dev server
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(morgan('dev'));
 
@@ -23,6 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/conversations', conversationRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/calls', callRoutes);
 
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok' });
