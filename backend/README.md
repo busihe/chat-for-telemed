@@ -6,7 +6,7 @@ A full-stack real-time chat application with TypeScript, React, Node.js, Express
 
 ### Backend (TypeScript)
 - **Authentication**: JWT-based auth with role-based access (admin, doctor, patient)
-- **Real-time messaging**: Socket.io for instant message delivery
+- **Real-time messaging and call**: Socket.io for instant message delivery and call 
 - **REST API**: Complete CRUD operations for users, conversations, and messages
 - **Database**: MongoDB with Mongoose ODM
 - **Documentation**: Swagger UI at `/api-docs`
