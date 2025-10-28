@@ -80,17 +80,17 @@ MONGO_URI=mongodb://127.0.0.1:27017/message_backend
 ## Project Structure
 
 ```
-├── src/                    # Backend source
+├── src/                   # Backend source
 │   ├── config/            # Database configuration
 │   ├── controllers/       # Route controllers
 │   ├── middleware/        # Auth middleware
-│   ├── models/           # Mongoose models
-│   ├── routes/           # Express routes
-│   ├── sockets/          # Socket.io handlers
-│   ├── types/            # TypeScript types
-│   ├── docs/             # Swagger documentation
-│   ├── app.ts            # Express app
-│   └── server.ts         # Server entry point
+│   ├── models/            # Mongoose models
+│   ├── routes/            # Express routes
+│   ├── sockets/           # Socket.io handlers
+│   ├── types/             # TypeScript types
+│   ├── docs/              # Swagger documentation
+│   ├── app.ts             # Express app
+│   └── server.ts          # Server entry point
 
 ```
 
